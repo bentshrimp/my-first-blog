@@ -122,4 +122,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-SESSION_COOKIE_DOMAIN = None
+SESSION_COOKIE_DOMAIN = http://bentshrimp.pythonanywhere.com
