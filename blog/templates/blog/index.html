@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Goding_Coding</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}?ver=1">
+        <link rel="background-image" href="{% static 'css/coding.png' %}">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js?ver=1"></script>
+        <script rel="stylesheet" href="{% static 'js/home.js' %}?ver=1"></script>
+        <link rel="stylesheet" href="/blog/templates/blog/debug.css">
+    </head>
+    <body>
+        <section id ="intro">
+            <div class="container is-fluid">
+                <div class="content has-text-centered">
+                    <a href="/">
+                        <p>Goding Coding</p>                     
+                    </a>
+                </div>
+            </div>
+        </section>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a id="logo" href="/">
+                  <img src="/static/img/logo.png" alt= ":|" width="60" height="60">
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href= "#intro">
+                        #Home
+                    </a>
+                    <a class="navbar-item" href="#document">
+                        #Document
+                    </a>
+                    <a class="navbar-item" href="#blog">
+                        #Blog
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                      <div class="buttons">
+                        {% if user.is_authenticated %}
+                            <a class="button is-primary" href="{% url 'post_new' %}" class="top-menu">
+                                <strong>Post</strong>
+                            </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="document"></div>
+        <section id="article">
+            <div class="content has-text-centered is-large">
+                <p class="title is-1">Django로 만들어본 블로그</p>
+            </div>
+            <div class="content has-text-centered is-large">
+                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
+                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
+                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
+                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
+                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
+            </div>
+        </section>
+        
+        <div id="blog"></div>
+        <section id= "posts" class="content has-text-left">
+            <div id="post">
+                <h1 id="banner" class= "title is-1">Blog</h1>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+              <p>
+                developed by <strong>Goding Coding</strong> with
+                <a href="https://www.python.org/">Django</a> and <a href="bulma.io">Bulma</a>.
+                <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+              </p>
+            </div>
+          </footer>
+    </body>

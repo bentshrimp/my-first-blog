@@ -1,0 +1,97 @@
+*{
+margin: 0;
+padding: 0;
+}
+  
+#intro{
+	display: table;
+	width: 100%;
+	height: 100vh;
+	background-image: url("/static/img/top.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#intro .container{
+	display: table-cell;
+	vertical-align: middle;
+}
+#intro .container .content{
+	font-size: 140px;
+	font-family: Raleway,sans-serif;
+	transition: all 0.3s ease-in-out;
+}
+#intro .container .content a{
+	color: white;
+}
+#intro .container .content:hover{
+	font-family: Raleway,sans-serif;
+	transform:scale(1.05);             
+	-webkit-transform:scale(1.05);
+	-moz-transform:scale(1.05);
+	-o-transform:scale(1.05);
+	transition: transform .35s;
+	-o-transition: transform .35s;
+	-moz-transition: transform .35s;
+	-webkit-transition: transform .35s;
+}
+
+.navbar{
+	height: 62px;
+	position: sticky;
+	top: 0;
+	background-color: #2f3640;
+	box-shadow: 0px 2px 2px darkgrey;	
+}
+.navbar .navbar-brand{
+	margin-left: 20px;
+}
+.navbar .navbar-menu .navbar-start{
+	margin-left: 10px;
+}
+.navbar-menu .navbar-item{
+	font-family: sans-serif;
+	color: white;
+}
+
+#article{
+	padding:24px;
+	padding-top: 20vh;
+	padding-bottom: 15vh;
+}
+#article .title{
+	padding-bottom: 50px;
+}
+
+#posts #post #banner{
+	margin:0;
+	padding-left:25px;
+	height: 72px;
+	color: white;
+	background-color: #227093;
+}
+
+#blog, #document{
+	height:65px;
+}
+
+#posts .hero-body{
+	padding: 30px;
+	padding-left:100px;
+	border-bottom: 2px solid white;
+}
+
+#posts .hero-body .title-1 {
+	display: inline;
+}
+#posts .hero-body .title-1 a{
+	display: inline;
+	font-family: Comic Sans MS;
+	color: black;
+}
+#posts .hero-body .subtitle-4{
+	display: inline;
+	padding-left: 30px;
+}
+#posts .hero-body .post{
+	padding-top: 25px;
+}

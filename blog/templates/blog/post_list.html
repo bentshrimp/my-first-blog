@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Bent_shrimp</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Bent_shrimp</a></h1>
-        </div>
+{% extends 'blog/index.html' %}
 
+    {% block content %}
         {% for post in posts %}
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h1><a href="">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </div>
+            <section class="hero is-light">
+                <div id="posts">
+                    <div class="hero-body">
+                        <h1 class="title-1">
+                            <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                        </h1>
+                        <p class="subtitle-4">{{ post.published_date }}</p>
+                        <p class="post">{{ post.text|linebreaksbr }}</p>
+                    </div>
+                </div>
+            </section>
         {% endfor %}
-    </body>
-</html>
+    {% endblock %}
+    
