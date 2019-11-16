@@ -15,5 +15,6 @@
         <div class="subtitle">
             <p id="text">{{ post.text|linebreaksbr }}</p>
         </div>
+        <a class="button is-primary" href="{% url 'post_edit' pk=post.pk %}">edit</a>
     </div>
 {% endblock %}
