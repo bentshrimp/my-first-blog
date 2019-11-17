@@ -7,16 +7,24 @@
         </div>
         <div class="subtitle">
             {% if post.published_date %}
-                <div id="date">
+                <div class="date">
                     {{ post.published_date }}
                 </div>
+            {% else %}
+                <a class="button is-primary" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
             {% endif %}
         </div>
         <div class="subtitle">
             <p id="text">{{ post.text|linebreaksbr }}</p>
         </div>
         {% if user.is_authenticated %}
-            <a class="button is-primary" href="{% url 'post_edit' pk=post.pk %}">edit</a>
+            <div class="container has-text-right">
+                <a id="draft" class="button is-primary is-outlined" href="{% url 'post_draft_list' %}">
+                    <strong>draft</strong>
+                </a>
+                <a class="button is-primary" href="{% url 'post_edit' pk=post.pk %}">edit</a>
+                <a class="button is-primary" href="{% url 'post_remove' pk=post.pk %}">delete</a>
+            </div>
         {% endif %}
     </div>
 {% endblock %}

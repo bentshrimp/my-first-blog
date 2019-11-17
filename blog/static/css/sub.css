@@ -36,15 +36,21 @@
 	padding-bottom: 20px;
 }
 .section .content .title-1 h1{
-	font-family: Comic Sans MS;
 	display: inline;
+	font-family: Comic Sans MS;
 }
 .section .content .subtitle{
 	display: inline;
 }
-.section .content .subtitle #date{
+.section .content .subtitle .date{
 	display: inline;
 }
 .section .content p{
 	margin-top:50px;
+	margin-bottom: 30px;
+}
+
+.section .content .container{
+	margin-top: 10vh;
+	margin-left: 0;
 }

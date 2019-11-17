@@ -7,10 +7,9 @@
                 <h1 class="title-1">
                     <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
                 </h1>
-                <p class="subtitle-4 has-text-right">{{ post.published_date }}</p>
-                <p class="post">{{ post.text|linebreaksbr }}</p>
+                <p class="subtitle-4">created: {{ post.created_date|date:'d-m-Y' }}</p>
+                <p class="post">{{ post.text|truncatechars:200 }}</p>
             </div>
         </section>
     {% endfor %}
 {% endblock %}
-    

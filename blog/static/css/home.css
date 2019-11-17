@@ -62,36 +62,37 @@ padding: 0;
 	padding-bottom: 50px;
 }
 
+
+#document, #blog{
+	height:65px;
+}
+
 #posts #post #banner{
 	margin:0;
 	padding-left:25px;
 	height: 72px;
-	color: white;
 	background-color: #227093;
+	color: white;
+	font-family: Times New Roman;
 }
 
-#blog, #document{
-	height:65px;
-}
-
-#posts .hero-body{
+.hero .hero-body{
 	padding: 30px;
 	padding-left:100px;
 	border-bottom: 2px solid white;
 }
-
-#posts .hero-body .title-1 {
+.hero .hero-body .title-1 {
 	display: inline;
 }
-#posts .hero-body .title-1 a{
+.hero .hero-body .title-1 a{
 	display: inline;
 	font-family: Comic Sans MS;
 	color: black;
 }
-#posts .hero-body .subtitle-4{
+.hero .hero-body .subtitle-4{
 	display: inline;
 	padding-left: 30px;
 }
-#posts .hero-body .post{
+.hero .hero-body .post{
 	padding-top: 25px;
 }
