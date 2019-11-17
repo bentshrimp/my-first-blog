@@ -14,9 +14,6 @@
                 <a class="button is-primary" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
             {% endif %}
         </div>
-        <div class="subtitle">
-            <p id="text">{{ post.text|linebreaksbr }}</p>
-        </div>
         {% if user.is_authenticated %}
             <div class="container has-text-right">
                 <a id="draft" class="button is-primary is-outlined" href="{% url 'post_draft_list' %}">
