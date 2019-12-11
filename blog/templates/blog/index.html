@@ -5,14 +5,13 @@
         <title>Goding Coding</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-        <link rel="stylesheet" href="{% static 'css/home.css' %}">
-        <link rel="background-image" href="{% static 'css/coding.png' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}?ver=2">
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js?ver=1"></script>
         <script rel="stylesheet" href="{% static 'js/home.js' %}?ver=1"></script>
         <!-- <link rel="stylesheet" href="/blog/templates/blog/debug.css"> -->
     </head>
     <body>
-        <section id ="intro">
+        <section id ="banner-intro">
             <div class="container is-fluid">
                 <div class="content has-text-centered">
                     <a href="/">
@@ -22,64 +21,100 @@
             </div>
         </section>
         <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a id="logo" href="/">
-                  <img src="/static/img/logo.png" alt= ":|" width="60" height="60">
-                </a>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href= "#intro">
-                        #Home
+                <div class="navbar-brand">
+                    <a id="logo" href="/">
+                      <img src="/static/img/logo.png" alt= ":|" width="60" height="60">
                     </a>
-                    <a class="navbar-item" href="#document">
-                        #Document
-                    </a>
-                    <a class="navbar-item" href="#blog">
-                        #Blog
+    
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </a>
                 </div>
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                      <div class="buttons">
-                        {% if user.is_authenticated %}
-                            <a class="button is-primary" href="{% url 'post_new' %}">
-                                <strong>Post</strong>
-                            </a>
-                        {% endif %}
-                      </div>
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href= "#banner-intro">
+                            #Home
+                        </a>
+                        <a class="navbar-item" href="#document">
+                            #Document
+                        </a>
+                        <a class="navbar-item" href="#blog">
+                            #Blog
+                        </a>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                          <div class="buttons">
+                            {% if user.is_authenticated %}
+                                <a class="button is-primary" href="{% url 'post_new' %}">
+                                    <strong>Post</strong>
+                                </a>
+                            {% endif %}
+                          </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        <div id="document"></div>
-        <section id="article">
-            <div class="content has-text-centered is-large">
-                <p class="title is-1">Django로 만들어본 블로그</p>
-            </div>
-            <div class="content has-text-centered is-large">
-                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
-                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
-                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
-                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
-                <p class= "words">고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩고딩코딩고딩코딩코딩코딩</p>
+        <div id="document">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <filter id="blur">
+                    <feGaussianBlur stdDeviation="6" />
+                </filter>
+            </svg>
+            <section id="article">
+                <div class="content has-text-centered is-large">
+                    <p>
+                        저희 
+                        <span class="title is-1">고딩코딩</span>
+                        <span class="subtitle is-5">(코딩하는 고딩들)</span>
+                        은 django로 이 블로그를 만들어봤습니다.
+                    </p>
+                </div>
+                <br><br>
+                <div class="content has-text-left is-medium">
+                    <p><strong>django</strong>는 python이라는 프로그래밍 언어로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크에요.
+                        쉽고 빠르게 웹사이트를 개발할 수 있도록 돕는 구성요소로 이루어진 웹 프레임워크랍니다.</p>
+                    <p>
+                        웹사이트를 구축할 때, 비슷한 유형의 요소들이 항상 필요합니다.
+                        비슷한 것들도 새로 만들땐 처음부터 다시 만들려면 힘들겠죠?
+                        집을 만드는데 굳이 나무를 직접 캐와야 하지는 않으니까요. 
+                        웹 프레임워크는 우리들의 이런 수고를 덜어주는 도구에요.</p>
+                    <br><br>
+                    <p>국가기관을 입법, 사법, 행정으로 나누듯이 웹 사이트를 비롯한 소프트웨어는
+                        Model, View, Controller로 나눠요. 이걸 MVC 패턴이라고 부른답니다.
+                        다만 저희가 쓰고 있는 django에선 이름만 다르게 <strong>MVT 패턴</strong>이라고 해요.
+                        <div id="pic-1">
+                            <img src="/static/img/MVT.png">
+                        </div>
+                        이 블로그의 게시판에서 쓰이고 읽히고 수정되는 글들은 데이터베이스의 데이터로 저장되죠.
+                        이 데이터의 형식을 지정하고 저장하고 불러오는 작업들에 관한 코드들이 <strong>Model</strong> 파트에서 작성.
+                        이걸 사용자가 목록과 글, 입력화면 등으로 시각적으로 볼 수 있도록 해주는 html, css 등의 
+                        요소가 Template 파트에서 작성되고요. 이 둘을 연결해주는 부분, Model의 데이터를 <strong>Template</strong>에 연결해서
+                        사용자가 화면을 통해 데이터를 읽고 쓰고 지우고 할 수 있도록 전반적으로 제어
+                         하는 파트가 <strong>View</strong>에요.
+                    </p>
+                </div>
+                <br><br><br>
+                <div class="content has-text-centered is-large">
+                    <p>저희가 만든 블로그의 설명를 듣고 직접 글을 올려보세요!</p>
+                </div>
+            </section>
+        </div>
+
+        <div id="blog"></div>
+        <section id= "banner-blog">
+            <div id="post">
+                <a href="#blog">
+                    <h1 class= "title is-1">Blog</h1>
+                </a>
             </div>
         </section>
-        
-        <div id="blog"></div>
-        <section id= "posts" class="content has-text-left">
-            <div id="post">
-                <h1 id="banner" class= "title is-1">Blog</h1>
-                {% block content %}
-                {% endblock %}
-            </div>
+        <section id="blog-list">
+            {% block content %}
+            {% endblock %}
         </section>
 
         <footer class="footer">
@@ -90,5 +125,5 @@
                 <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
               </p>
             </div>
-          </footer>
+        </footer>
     </body>

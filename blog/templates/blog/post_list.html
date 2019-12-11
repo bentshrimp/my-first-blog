@@ -7,7 +7,7 @@
                 <h1 class="title-1">
                     <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
                 </h1>
-                <p class="subtitle-4 has-text-right">{{ post.published_date }}</p>
+                <h2 class="subtitle-4 has-text-right">{{ post.published_date }}</h2>
             </div>
         </section>
     {% endfor %}
